@@ -1,0 +1,4 @@
+binaryornot
+chardet
+rarfile
+sh
