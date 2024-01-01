@@ -2,3 +2,4 @@ binaryornot
 chardet
 rarfile
 sh
+security~=1.2.0

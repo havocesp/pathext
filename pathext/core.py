@@ -28,6 +28,7 @@ from rarfile import RarFile
 from sh import Command, RunningCommand, zpaq
 
 from pathext.constants import PathPerm
+from security import safe_command
 
 
 class PathExt(type(Path())):
@@ -608,7 +609,7 @@ class PathExt(type(Path())):
                 _cmd_str = list2cmdline(_cmds)
                 return shlex.split(_cmd_str)
 
-            pr = Popen(_safe_cmd(*command))
+            pr = safe_command.run(Popen, _safe_cmd(*command))
             # pr.
             # self.label.setText(f"{task_name} successful!")
         except CalledProcessError as err:
