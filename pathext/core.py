@@ -311,7 +311,7 @@ class PathExt(type(Path())):
             if self.is_file:
                 return self.stat().st_size
             elif self.is_dir:
-                return sum([entry.stat().st_size for entry in self.rglob('*') if not entry.is_symlink and self.is_file])
+                return sum(entry.stat().st_size for entry in self.rglob('*') if not entry.is_symlink and self.is_file)
             else:
                 raise FileNotFoundError(f'"{self}" not found or is not neither a directory nor a file.')
         else:
