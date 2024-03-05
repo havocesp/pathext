@@ -15,7 +15,7 @@ setup(
     # packages=[''],
     package_dir={'': 'pathext'},
     packages=find_packages(exclude=['.idea*', 'build*', '*.vs', '*.vscode', '*.code', '*.atom', '*.mypy_cache', f'${__package__}.egg-info*', 'dist*', 'venv*', '*.__pycache__*', '*.tox*']),
-    url=f'https://github.com/havocesp/pathext',
+    url='https://github.com/havocesp/pathext',
     license='UNLICENSE',
     keywords='',
     author='havocesp',
