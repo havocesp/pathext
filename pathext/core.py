@@ -552,8 +552,7 @@ class PathExt(type(Path())):
 
         :return: the num of lines, words and chars readed from self content.
         """
-        _lines = self.lines
-        if _lines:
+        if _lines := self.lines:
             _words = []
             _chars = 0
             for ln in _lines:
